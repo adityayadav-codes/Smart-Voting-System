@@ -1,33 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Sections</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
 
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
 
-  <section data-aos="fade-up">
-    <h2>Features of the System</h2>
-    <div class="features">
-      <a href="#" class="feature-box">🔐 Secure Login</a>
-      <a href="#" class="feature-box">✅ Voter Verification</a>
-      <a href="#" class="feature-box">📊 Real-time Results</a>
-      <a href="#" class="feature-box">🛠️ Admin Panel</a>
-      <a href="#" class="feature-box">🔒 Encrypted Voting</a>
-      <a href="#" class="feature-box">🌐 Accessible Anywhere</a>
-    </div>
-  </section>
+    .service-box {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      border-bottom: 2px solid #dcdcdc;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .service-box:hover {
+      background: #f1f1f1;
+    }
 
-  <section data-aos="fade-up">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step-box">📝 Step 1: Register</div>
-      <div class="step-box">🧾 Step 2: Verify Identity</div>
-      <div class="step-box">🗳️ Step 3: Cast Vote</div>
-      <div class="step-box">📈 Step 4: View Results</div>
-    </div>
-  </section>
+    .arrow {
+      transition: transform 0.3s;
+    }
 
-  <section data-aos="fade-up">
-    <h2>Why Choose Us?</h2>
-    <div class="why-choose">
-      <div class="why-box">✅ Tamper-proof</div>
-      <div class="why-box">💡 Easy to Use</div>
-      <div class="why-box">🔍 Transparent</div>
-      <div class="why-box">⏱️ Saves Time & Cost</div>
-    </div>
-  </section>
+    .section {
+      background: white;
+      padding: 25px;
+      margin: 50px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      min-height: 300px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div class="container">
+    <h2>Select a Service</h2>
+
+    <div class="service-box" data-target="section1">Service 1 <span class="arrow">▼</span></div>
+    <div class="service-box" data-target="section2">Service 2 <span class="arrow">▼</span></div>
+    <div class="service-box" data-target="section3">Service 3 <span class="arrow">▼</span></div>
+    <div class="service-box" data-target="section4">Service 4 <span class="arrow">▼</span></div>
+  </div> -->
+
+  <div class="container">
+    <div id="section1" class="section"> <h3>Service 1 Details</h3> <p>Your content here...</p> </div>
+    <div id="section2" class="section"> <h3>Service 2 Details</h3> <p>Your content here...</p> </div>
+    <div id="section3" class="section"> <h3>Service 3 Details</h3> <p>Your content here...</p> </div>
+    <div id="section4" class="section"> <h3>Service 4 Details</h3> <p>Your content here...</p> </div>
+  </div>
+
+  <script>
+    const boxes = document.querySelectorAll('.service-box');
+
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        const target = document.getElementById(box.dataset.target);
+
+        // Scroll to that particular section
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // Arrow rotation handling
+        boxes.forEach(b => {
+          if (b !== box) b.querySelector('.arrow').style.transform = 'rotate(0deg)';
+        });
+
+        const arrow = box.querySelector('.arrow');
+        arrow.style.transform = arrow.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    });
+  </script>
+</body>
+</html>
