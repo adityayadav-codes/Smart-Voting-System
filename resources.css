@@ -1,0 +1,95 @@
+/* ===============================
+   BASE STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.resources-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.resources-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.resources-header h1 {
+  font-size: 2rem;
+  color: #0b1f3a;
+  margin-bottom: 0.6rem;
+}
+
+.resources-header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===============================
+   GRID
+================================ */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.resource-card {
+  background: #ffffff;
+  border-left: 4px solid #19f6c3;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.resource-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #0b1f3a;
+}
+
+.resource-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.resource-card a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0b1f3a;
+  text-decoration: none;
+}
+
+.resource-card a:hover {
+  color: #19f6c3;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .resources-header h1 {
+    font-size: 1.6rem;
+  }
+}
