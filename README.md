@@ -5,7 +5,7 @@
 ![CSS](https://img.shields.io/badge/CSS-Styling-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Logic-yellow)
 ![Python](https://img.shields.io/badge/Python-Backend-green)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-darkgreen)
+![MongoDB](https://img.shields.io/badge/django-Database-darkgreen)
 
 A **Smart Voting System** is a web-based application that allows users
 to securely vote online. The system ensures that each registered voter
